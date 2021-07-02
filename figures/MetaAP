@@ -1,0 +1,33 @@
+digraph Tree {
+labelloc="t";
+label="MetaAP, Train AP: 49.82%, Test AP: 43.68%";
+node [shape=box, style="filled", margin=0.01, width=0, height=0] ;
+graph [nodesep="0", ranksep="0.2", margin=0, width=0, height=0];
+0 [label="X0 <= 0.655\ntrain (1014, 24)", fillcolor="white"] ;
+0 -> 1 [color="#6EAF0F"];
+0 -> 8 [color="#ED5853"];
+1 [label="X3 <= 0.285\ntrain (953, 2)", fillcolor="cyan"] ;
+1 -> 2 [color="#6EAF0F"];
+1 -> 5 [color="#ED5853"];
+2 [label="X5 <= 0.25\ntrain (672, 0)", fillcolor="white"] ;
+2 -> 3 [color="black"];
+3 [label="score = 0.25\ntrain (822, 0)", fillcolor="cyan"] ;
+5 [label="X3 <= 0.395\ntrain (281, 2)", fillcolor="white"] ;
+5 -> 6 [color="#6EAF0F"];
+5 -> 3 [color="#ED5853"];
+6 [label="score = 0.5\ntrain (131, 2)", fillcolor="cyan"] ;
+8 [label="X1 <= 0.625\ntrain (115, 23)", fillcolor="white"] ;
+8 -> 1 [color="#6EAF0F"];
+8 -> 9 [color="#ED5853"];
+9 [label="X2 <= 0.405\ntrain (61, 22)", fillcolor="cyan"] ;
+9 -> 10 [color="#6EAF0F"];
+9 -> 11 [color="#ED5853"];
+10 [label="score = 0.75\ntrain (47, 3)", fillcolor="cyan"] ;
+11 [label="X6 <= 0.525\ntrain (30, 21)", fillcolor="white"] ;
+11 -> 12 [color="#6EAF0F"];
+11 -> 10 [color="#ED5853"];
+12 [label="score = 1.0\ntrain (14, 19)", fillcolor="cyan"] ;
+{rank=same;6->3 [style=invis];}
+{rank=same;9->1 [style=invis];}
+{rank=same;12->10 [style=invis];}
+}
